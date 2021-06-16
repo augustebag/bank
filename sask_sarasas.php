@@ -12,6 +12,13 @@
 <body>
     
     <?php include __DIR__ . '/menu.php' ?>
+    <ul>
+    <?php foreach($saskaita as $saskaita2) : ?>
+        <li> Sąskaita Nr. <?= $saskaita2['id'] ?> Viso sąskaitų: <?= $saskaita2['amount'] ?>
+        [<a href="?action=add$id=<?= $saskaita2['id'] ?>">Pridėti</a>]
+        </li>
+    <?php endforeach ?>
+    </ul>
     
 </body>
 </html>

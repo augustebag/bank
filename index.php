@@ -1,13 +1,17 @@
 <?php
 
 session_start();
+function redirect() {
+    header('Location: http://localhost/bank/');
+    die;
+}
 
 // Saskaita ['id' => 25, 'amount' => 200]
 
 if (!file_exists(__DIR__.'/saskaita.json')) {
     file_put_contents(__DIR__.'/saskaita.json', json_encode([]));
 }
-$saskaita = json_decode( file_get_contents(__DIR__.'/saskaita.json'), 1);
+$saskaita = json_decode(file_get_contents(__DIR__.'/saskaita.json'), 1);
 
 // 1. Saskaitu sarasas GET
 
@@ -22,6 +26,11 @@ elseif($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 // 3. Pridejimo vykdymas POST
+
+elseif($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    require __DIR__ .'/doAdd.php';
+}
+
 // 4. Atemimo atvaizdavimas GET
 // 5. Isemimo vykdymas POST
 // 6. Naujos saskaitos pridejimo atvaizdavimas GET
@@ -29,21 +38,13 @@ elseif($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET') {
 elseif($_GET['action'] == 'addAccount' && $_SERVER['REQUEST_METHOD'] == 'GET') {
     require __DIR__ . '/sask_pridejimas.php';
 }
+
 // 7. Naujos saskaitos pridejimo vykdymas POST
+
+elseif($_GET['action'] == 'addAccount' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    require __DIR__ . '/doSask_pridejimas.php';
+}
+
 // 8. Saskaitos istrynimo vykdymas POST
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bankas</title>
-</head>
-<body>
-    
-</body>
-</html>

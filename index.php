@@ -32,7 +32,17 @@ elseif($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // 4. Atemimo atvaizdavimas GET
+
+elseif($_GET['action'] == 'rem' && $_SERVER['REQUEST_METHOD'] == 'GET') {
+    require __DIR__ .'/rem.php';
+}
+
 // 5. Isemimo vykdymas POST
+
+elseif($_GET['action'] == 'rem' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    require __DIR__ .'/dorem.php';
+}
+
 // 6. Naujos saskaitos pridejimo atvaizdavimas GET
 
 elseif($_GET['action'] == 'addAccount' && $_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -46,5 +56,9 @@ elseif($_GET['action'] == 'addAccount' && $_SERVER['REQUEST_METHOD'] == 'POST') 
 }
 
 // 8. Saskaitos istrynimo vykdymas POST
+
+elseif($_GET['action'] == 'delete' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    require __DIR__ . '/doDelete.php';
+}
 
 ?>

@@ -11,6 +11,13 @@
     <?php include __DIR__ . '/menu.php' ?>
     <?php include __DIR__ . '/pranesimai.php' ?>
     <ul>
+
+    <?php
+    usort($saskaita, function($a, $b) {
+        return $b['amount'] <=> $a['amount'];
+    })
+    ?>
+
     <?php foreach($saskaita as $saskaita2) : ?>
         <li>
         Sąskaitos Nr. <?= $saskaita2['id'] ?> Viso saskaitų: <?= $saskaita2['amount'] ?>

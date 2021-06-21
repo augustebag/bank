@@ -1,8 +1,18 @@
 <?php
 
 session_start();
+
 function redirect() {
     header('Location: http://localhost/bank/');
+    die;
+}
+
+function redirectToAction($action, $id = 0) {
+    if ($id) {
+        header('Location: http://localhost/bank/?action=' . $action, '&id=' . $id);
+    } else {
+        header('Location: http://localhost/bank/?action=' . $action);
+    }
     die;
 }
 

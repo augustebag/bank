@@ -10,6 +10,7 @@
     
     <?php include __DIR__.'/menu.php' ?>
     <?php $id = $_GET['id'] ?? 0 ?>
+    <?php include __DIR__ . '/pranesimai.php' ?>
     <form action="?action=rem&id=<?= $id ?>" method="post">
     <input type="text" name="amount">
     <button> Išimti lėšas </button>

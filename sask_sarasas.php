@@ -9,6 +9,7 @@
 <body>
     
     <?php include __DIR__ . '/menu.php' ?>
+    <?php include __DIR__ . '/pranesimai.php' ?>
     <ul>
     <?php foreach($saskaita as $saskaita2) : ?>
         <li>

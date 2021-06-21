@@ -6,6 +6,20 @@ function redirect() {
     die;
 }
 
+function getMessage() {
+    if(!isset($_SESSION['pranesimai'])) {
+        return false;
+    }
+    $pranesimai = $_SESSION['pranesimai'];
+    unset($_SESSION['pranesimai']);
+    return $pranesimai;
+}
+
+function setMessage(string $pranesimai) {
+    $_SESSION['pranesimai'] = $pranesimai;
+}
+
+
 // Saskaita ['id' => 25, 'amount' => 200]
 
 if (!file_exists(__DIR__.'/saskaita.json')) {

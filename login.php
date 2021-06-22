@@ -4,7 +4,7 @@ require __DIR__ . '/bootstrap.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    if(isset($_GET['atsijungti'])) {
+    if(isset($_GET['logout'])) {
         unset($_SESSION['prisijunges'], $_SESSION['name']);
         setMessage('Viso gero');
         header('Location: http://localhost/bank/login.php');

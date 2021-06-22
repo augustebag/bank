@@ -21,6 +21,6 @@ if(!isset($_SESSION['prisijunges'])) {
     <?php include __DIR__ . '/menu.php' ?>
     <?php include __DIR__ . '/pranesimai.php' ?>
     <h1>Darbuotojo paskyra</h1>
-    <a href="?action=addAccount">Sąskaitų sąrašas</a>
+    <a href="http://localhost/bank/">Sąskaitų sąrašas</a>
 </body>
 </html>

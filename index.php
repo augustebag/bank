@@ -3,7 +3,7 @@
 require __DIR__ . '/bootstrap.php';
 
 function redirect() {
-    header('Location: http://localhost/bank/home.php');
+    header('Location: http://localhost/bank/member.php');
     die;
 }
 

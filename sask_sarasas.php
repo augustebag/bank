@@ -19,14 +19,12 @@
     ?>
 
     <?php foreach($saskaita as $saskaita2) : ?>
-        <li>
-        Sąskaitos Nr. <?= $saskaita2['id'] ?> Viso saskaitų: <?= $saskaita2['amount'] ?>
+        <div> Sąskaitos Nr. <?= $saskaita2['id'] ?> </div>
             [<a href="?action=add&id=<?= $saskaita2['id'] ?>">Pridėti</a>]
             [<a href="?action=rem&id=<?= $saskaita2['id'] ?>">Išimti</a>]
             <form action="?action=delete&id=<?= $saskaita2['id'] ?>" method="post">
             <button type="submit">Ištrinti sąskaitą</button>
             </form>
-        </li>
     <?php endforeach ?>
     </ul>
     

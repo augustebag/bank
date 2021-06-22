@@ -10,8 +10,8 @@
     
     <?php include __DIR__ . '/menu.php' ?>
     <?php include __DIR__ . '/pranesimai.php' ?>
-    <ul>
 
+    <ul>
     <?php
     usort($saskaita, function($a, $b) {
         return $b['amount'] <=> $a['amount'];

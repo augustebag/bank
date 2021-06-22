@@ -1,9 +1,9 @@
 <?php
 
-session_start();
+require __DIR__ . '/bootstrap.php';
 
 function redirect() {
-    header('Location: http://localhost/bank/');
+    header('Location: http://localhost/bank/home.php');
     die;
 }
 
@@ -16,18 +16,6 @@ function redirectToAction($action, $id = 0) {
     die;
 }
 
-function getMessage() {
-    if(!isset($_SESSION['pranesimai'])) {
-        return false;
-    }
-    $pranesimai = $_SESSION['pranesimai'];
-    unset($_SESSION['pranesimai']);
-    return $pranesimai;
-}
-
-function setMessage(string $pranesimai) {
-    $_SESSION['pranesimai'] = $pranesimai;
-}
 
 
 // Saskaita ['id' => 25, 'amount' => 200]

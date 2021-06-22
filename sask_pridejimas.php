@@ -14,7 +14,6 @@
     <?php include __DIR__ . '/menu.php' ?>
 
     <form action="?action=addAccount" method="post">
-        <button>Pridėti naują sąskaitą</button><br>
 
         <label for="name"> Vardas </label>
         <input type="text" name="name"><br>
@@ -28,8 +27,8 @@
         <label for="id"> Sąskaitos Nr. </label>
         <input type="text" name="id"><br>
 
-        <label for="balance"> Sąskaitos likutis </label>
-        <input type="text" name="balance"><br>
+        <label for="amount"> Sąskaitos likutis </label>
+        <input type="text" name="amount"><br>
 
         <button>Pridėti sąskaitą</button><br>
     </form>

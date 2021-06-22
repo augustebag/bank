@@ -23,7 +23,7 @@
         <div> Pavardė <?= $saskaita2['surname'] ?> </div>
         <div> Sąskaitos Nr. <?= $saskaita2['id'] ?> </div>
         <div> Asmens kodas <?= $saskaita2['accNumber'] ?> </div>
-        <div> Sąskaitos likutis  <?= $saskaita2['balance'] ?> </div>
+        <div> Sąskaitos likutis  <?= $saskaita2['amount'] ?> </div>
             [<a href="?action=add&id=<?= $saskaita2['id'] ?>">Pridėti</a>]
             [<a href="?action=rem&id=<?= $saskaita2['id'] ?>">Išimti</a>]
             <form action="?action=delete&id=<?= $saskaita2['id'] ?>" method="post">

@@ -1,6 +1,7 @@
-header {
-    background-color: rgb(175, 231, 173);
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+body {
+    background-color: white;
+    font-family: "Gill Sans", "Trebuchet MS", sans-serif;
+    margin: 20px;
 }
 
 .container {
@@ -36,4 +37,9 @@ h1 {
 .img {
     margin-right: 40%;
     width: 85px;
+}
+
+.add {
+    padding-left: 20px;
+    align-content: center;
 }

@@ -1,4 +1,7 @@
 <?php
+$saskPradzia = 'LT';
+$accNum = rand(100000000, 9999999999);
+$account = $saskPradzia . $accNum;
 ?>
 
 <!DOCTYPE html>
@@ -16,24 +19,30 @@
     
     <?php include __DIR__ . '/menu.php' ?>
 
-    <form action="?action=addAccount" method="post">
-
-        <label for="name"> Vardas </label>
-        <input type="text" name="name"><br>
-
-        <label for="surname"> Pavardė </label>
-        <input type="text" name="surname"><br>
-
-        <label for="accNumber"> Asmens kodas </label>
-        <input type="text" name="accNumber"><br>
-
-        <label for="id"> Sąskaitos Nr. </label>
-        <input type="text" name="id"><br>
-
-        <label for="amount"> Sąskaitos likutis </label>
-        <input type="text" name="amount"><br>
-
-        <button type="button" class="btn btn-dark">Pridėti sąskaitą</button>
+    <form action="?action=addAccount" class="add" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name"> Vardas </label>
+                <input type="text" class="form-control name="name"><br>
+            </div>
+        <div class="form-group col-md-6">
+                <label for="surname"> Pavardė </label>
+                <input type="text" class="form-control name="surname"><br>
+                </div>
+        <div class="form-group col-md-6">
+            <label for="accNumber"> Asmens kodas </label>
+            <input type="text" class="form-control name="accNumber"><br>
+            </div>
+        <div class="form-group col-md-6">
+            <label for="id"> Sąskaitos Nr. </label>
+            <input type="text" class="form-control name="id" value="<?= $account ?>"><br>
+            </div>
+        <div class="form-group col-md-6">
+            <label for="amount"> Sąskaitos likutis </label>
+            <input type="text" class="form-control name="amount"><br>
+            </div>
+        <div class="form-group col-md-6">
+            <button type="submit" class="btn btn-dark">Pridėti sąskaitą</button>
     </form>
     
 </body>

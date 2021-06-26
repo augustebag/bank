@@ -1,6 +1,9 @@
 <?php if ($pranesimai = getMessage()) : ?>
 
-<div style="margin:10;padding:10;border:1px solid black;">
+<div style="
+    color: grey;
+    text-align: center;
+    font-style: italic;">
 <?= $pranesimai ?>
 </div>
 

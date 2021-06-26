@@ -28,7 +28,7 @@
             <th>Pavardė</th>
             <th>Sąskaitos Nr.</th>
             <th>Asmens kodas</th>
-            <th>Sąskaitos likutis</th>
+            <th>Sąskaitos likutis, Eur.</th>
         </tr>
     </thead>
     <tbody> 
@@ -45,10 +45,10 @@
                 <td><?=$id?></td>
                 <td><?=$accNumber?></td>
                 <td><?=$amount?></td>
-                    <a href="?action=add&id=<?= $saskaita2['id'] ?>">Pridėti</a>
-                    <a href="?action=rem&id=<?= $saskaita2['id'] ?>">Išimti</a>
+                <td><a class="btn btn-secondary" href="?action=add&id=<?= $saskaita2['id'] ?>">Pridėti</a></td>
+                <td><a class="btn btn-secondary" href="?action=rem&id=<?= $saskaita2['id'] ?>">Išimti</a></td>
                     <form action="?action=delete&id=<?= $saskaita2['id'] ?>" method="post">
-                        <button type="submit">Ištrinti sąskaitą</button>
+                    <td><button type="submit"  class="btn btn-danger">Ištrinti sąskaitą</button></td>
                     </form> 
              </tr>
              <?php endforeach ?>

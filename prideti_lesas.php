@@ -16,10 +16,14 @@
     
     <?php include __DIR__.'/menu.php' ?>
     <?php $id = $_GET['id'] ?? 0 ?>
+    <h1>Pridėti lėšas</h1>
+    <div class="col-md-6">
     <form action="?action=add&id=<?= $id ?>" method="post">
-    <input type="text" name="amount">
-    <button> Pridėti lėšas </button>
+    <input type="text" class="form-control" name="amount"><br>
+    <button class="btn btn-secondary"> Pridėti lėšas </button>
+    <a class="btn btn-danger" href=http://localhost/bank/>Grįžti</a>
     </form>
+    </div>
     
 </body>
 </html>

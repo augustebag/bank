@@ -1,5 +1,6 @@
 <?php
 
+
 $id = $_GET['id'] ?? 0;
 foreach($saskaita as &$saskaita2) {
     if($saskaita2['id'] == $id) {

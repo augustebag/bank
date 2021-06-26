@@ -23,23 +23,23 @@ $account = $saskPradzia . $accNum;
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="name"> Vardas </label>
-                <input type="text" class="form-control name="name"><br>
+                <input type="text" class="form-control" name='name'><br>
             </div>
         <div class="form-group col-md-6">
                 <label for="surname"> Pavardė </label>
-                <input type="text" class="form-control name="surname"><br>
+                <input type="text" class="form-control" name='surname'><br>
                 </div>
         <div class="form-group col-md-6">
             <label for="accNumber"> Asmens kodas </label>
-            <input type="text" class="form-control name="accNumber"><br>
+            <input type="text" class="form-control" name="accNumber"><br>
             </div>
         <div class="form-group col-md-6">
             <label for="id"> Sąskaitos Nr. </label>
-            <input type="text" class="form-control name="id" value="<?= $account ?>"><br>
+            <input type="text" class="form-control" name="id" value="<?= $account ?>"><br>
             </div>
         <div class="form-group col-md-6">
             <label for="amount"> Sąskaitos likutis </label>
-            <input type="text" class="form-control name="amount"><br>
+            <input type="text" class="form-control" name="amount"><br>
             </div>
         <div class="form-group col-md-6">
             <button type="submit" class="btn btn-dark">Pridėti sąskaitą</button>

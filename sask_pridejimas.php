@@ -1,7 +1,14 @@
 <?php
-$saskPradzia = 'LT';
-$accNum = rand(100000000, 9999999999);
+
+// saskaita
+
+$saskPradzia = 'LT5940100';
+$accNum = null;
+for ($i=0; $i < 6; $i++) { 
+    $accNum.= rand(0, 9);
+} 
 $account = $saskPradzia . $accNum;
+
 ?>
 
 <!DOCTYPE html>
@@ -23,19 +30,19 @@ $account = $saskPradzia . $accNum;
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="name"> Vardas </label>
-                <input type="text" class="form-control" name='name'><br>
+                <input type="text" class="form-control" name='name' required><br>
             </div>
         <div class="form-group col-md-6">
                 <label for="surname"> Pavardė </label>
-                <input type="text" class="form-control" name='surname'><br>
+                <input type="text" class="form-control" name='surname'required><br>
                 </div>
         <div class="form-group col-md-6">
             <label for="accNumber"> Asmens kodas </label>
-            <input type="text" class="form-control" name="accNumber"><br>
+            <input type="text" class="form-control" name="accNumber" required><br>
             </div>
         <div class="form-group col-md-6">
             <label for="id"> Sąskaitos Nr. </label>
-            <input type="text" class="form-control" name="id" value="<?= $account ?>"><br>
+            <input type="text" class="form-control" name="id" value="<?= $account ?>" readonly><br>
             </div>
         <div class="form-group col-md-6">
             <label for="amount"> Sąskaitos likutis </label>

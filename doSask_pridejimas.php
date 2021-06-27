@@ -10,6 +10,7 @@ $saskaita2 = [
     ['name' => 'Rasa', 'surname' => 'Rasienė'],
 ];
 
+
 file_put_contents(__DIR__.'/saskaita.json', json_encode($saskaita));
 setMessage('Nauja sąskaita pridėta!');
 redirect();

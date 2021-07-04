@@ -2,6 +2,7 @@
 
 session_start();
 
+
 function getMessage() {
     if(!isset($_SESSION['pranesimai'])) {
         return false;
